@@ -10,7 +10,7 @@ import java.math.BigDecimal;
  * {@link  BigDecimal} 类型除法操作器
  * </p>
  *
- * @author chenwc@tsintergy.com
+ * @author WECENG
  * @since 2024/5/28 17:31
  */
 public class BigDecimalDivOperator extends BaseDivOperator<BigDecimal> {

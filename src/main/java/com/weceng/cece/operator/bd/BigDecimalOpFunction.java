@@ -3,7 +3,6 @@ package com.weceng.cece.operator.bd;
 import cn.hutool.core.lang.Assert;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.expression.EvaluationException;
-import org.springframework.expression.ExpressionException;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -11,13 +10,14 @@ import java.math.RoundingMode;
 import java.util.*;
 import java.util.function.BiFunction;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * <p>
  * BigDecimal计算类
  * </p>
  *
- * @author chenwc@tsintergy.com
+ * @author WECENG
  * @since 2024/5/30 18:32
  */
 public class BigDecimalOpFunction {
@@ -510,6 +510,19 @@ public class BigDecimalOpFunction {
             return null;
         }
         return a.divide(b, MATH_CONTEXT);
+    }
+
+    /**
+     * 创建 list
+     *
+     * @param value 值
+     * @param size 长度
+     * @return list
+     */
+    public static List<BigDecimal> createList(BigDecimal value, int size) {
+        return IntStream.range(0, size)
+                .mapToObj(i -> value)
+                .collect(Collectors.toList());
     }
 
 }

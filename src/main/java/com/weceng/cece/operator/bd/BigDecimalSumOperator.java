@@ -11,7 +11,7 @@ import java.util.List;
  * {@link  BigDecimal} 类型合计操作器
  * </p>
  *
- * @author chenwc@tsintergy.com
+ * @author WECENG
  * @since 2024/5/29 09:20
  */
 public class BigDecimalSumOperator extends BaseSumOperator<BigDecimal> {

@@ -11,10 +11,20 @@ import java.util.List;
  * 合计操作器
  * </p>
  *
- * @author chenwc@tsintergy.com
+ * @author WECENG
  * @since 2024/5/28 17:42
  */
-public abstract class BaseSumOperator<T> implements Operator<T> {
+public abstract class BaseSumOperator<T> implements Operator<T,T> {
+
+    /**
+     * 名称
+     *
+     * @return 名称
+     */
+    @Override
+    public String name() {
+        return "合计";
+    }
 
     /**
      * 符号

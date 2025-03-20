@@ -11,10 +11,21 @@ import java.util.List;
  * 加权均值操作器
  * </p>
  *
- * @author chenwc@tsintergy.com
+ * @author WECENG
  * @since 2024/5/28 18:04
  */
-public abstract class BaseWeightAvgOperator<T> implements Operator<T> {
+public abstract class BaseWeightAvgOperator<T> implements Operator<T,T> {
+
+    /**
+     * 名称
+     *
+     * @return 名称
+     */
+    @Override
+    public String name() {
+        return "加权平均";
+    }
+
     /**
      * 符号
      *

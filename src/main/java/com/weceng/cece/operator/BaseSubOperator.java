@@ -8,10 +8,20 @@ import cn.hutool.core.lang.Assert;
  * 减法操作器
  * </p>
  *
- * @author chenwc@tsintergy.com
+ * @author WECENG
  * @since 2024/5/28 15:29
  */
-public abstract class BaseSubOperator<T> implements Operator<T> {
+public abstract class BaseSubOperator<T> implements Operator<T,T> {
+
+    /**
+     * 名称
+     *
+     * @return 名称
+     */
+    @Override
+    public String name() {
+        return "减";
+    }
 
     /**
      * 符号

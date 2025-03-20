@@ -11,10 +11,20 @@ import java.util.List;
  * 算术均值操作器
  * </p>
  *
- * @author chenwc@tsintergy.com
+ * @author WECENG
  * @since 2024/5/28 17:58
  */
-public abstract class BaseAvgOperator<T> implements Operator<T> {
+public abstract class BaseAvgOperator<T> implements Operator<T,T> {
+
+    /**
+     * 名称
+     *
+     * @return 名称
+     */
+    @Override
+    public String name() {
+        return "算术平均";
+    }
 
     /**
      * 符号

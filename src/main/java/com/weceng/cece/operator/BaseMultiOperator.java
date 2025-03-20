@@ -8,10 +8,20 @@ import cn.hutool.core.lang.Assert;
  * 乘法操作器
  * </p>
  *
- * @author chenwc@tsintergy.com
+ * @author WECENG
  * @since 2024/5/28 15:34
  */
-public abstract class BaseMultiOperator<T> implements Operator<T> {
+public abstract class BaseMultiOperator<T> implements Operator<T,T> {
+
+    /**
+     * 名称
+     *
+     * @return 名称
+     */
+    @Override
+    public String name() {
+        return "乘";
+    }
 
     /**
      * 符号

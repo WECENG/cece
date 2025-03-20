@@ -1,17 +1,20 @@
 package com.weceng.cece.operator;
 
 
-import cn.hutool.core.lang.Assert;
-
 /**
  * <p>
  * 加法操作器
  * </p>
  *
- * @author chenwc@tsintergy.com
+ * @author WECENG
  * @since 2024/5/27 10:33
  */
-public abstract class BaseAddOperator<T> implements Operator<T> {
+public abstract class BaseAddOperator<T> implements Operator<T, T> {
+
+    @Override
+    public String name() {
+        return "加";
+    }
 
     @Override
     public String symbol() {
@@ -33,7 +36,6 @@ public abstract class BaseAddOperator<T> implements Operator<T> {
     @SafeVarargs
     @Override
     public final T apply(T... op) {
-        Assert.isTrue(op.length == ops(), "操作数不符");
         T op1 = op[0];
         T op2 = op[1];
         return add(op1, op2);

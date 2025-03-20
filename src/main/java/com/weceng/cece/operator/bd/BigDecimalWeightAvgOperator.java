@@ -11,7 +11,7 @@ import java.util.List;
  * {@link  BigDecimal} 类型加权均值操作器
  * </p>
  *
- * @author chenwc@tsintergy.com
+ * @author WECENG
  * @since 2024/5/29 09:24
  */
 public class BigDecimalWeightAvgOperator extends BaseWeightAvgOperator<BigDecimal> {

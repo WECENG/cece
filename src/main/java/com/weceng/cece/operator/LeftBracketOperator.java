@@ -1,18 +1,16 @@
 package com.weceng.cece.operator;
 
-
-import cn.hutool.core.lang.Assert;
+import cn.hutool.dfa.StopChar;
 
 /**
  * <p>
- * 除法操作器
+ * 左括号
  * </p>
  *
  * @author WECENG
- * @since 2024/5/28 15:36
+ * @since 2024/10/12 11:54
  */
-public abstract class BaseDivOperator<T> implements Operator<T,T> {
-
+public class LeftBracketOperator<T> implements Operator<T,T> {
     /**
      * 名称
      *
@@ -20,17 +18,18 @@ public abstract class BaseDivOperator<T> implements Operator<T,T> {
      */
     @Override
     public String name() {
-        return "除";
+        return "左括号";
     }
 
     /**
      * 符号
      *
      * @return 符号
+     * {@link StopChar}可用
      */
     @Override
     public String symbol() {
-        return "/";
+        return String.valueOf(OperatorConstant.LEFT_BRACKET);
     }
 
     /**
@@ -40,7 +39,7 @@ public abstract class BaseDivOperator<T> implements Operator<T,T> {
      */
     @Override
     public int precedence() {
-        return 2;
+        return Integer.MAX_VALUE;
     }
 
     /**
@@ -52,18 +51,6 @@ public abstract class BaseDivOperator<T> implements Operator<T,T> {
     @SafeVarargs
     @Override
     public final T apply(T... op) {
-        Assert.isTrue(op.length == ops(), "操作数不符");
-        T op1 = op[0];
-        T op2 = op[1];
-        return div(op1, op2);
+        throw new UnsupportedOperationException("不支持该操作运算！");
     }
-
-    /**
-     * 除法操作
-     *
-     * @param op1 操作数1
-     * @param op2 操作数2
-     * @return 结果
-     */
-    public abstract T div(T op1, T op2);
 }
