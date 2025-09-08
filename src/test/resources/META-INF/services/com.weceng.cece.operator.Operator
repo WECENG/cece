@@ -1,5 +1,0 @@
-com.weceng.cece.operator.bd.BigDecimalAddOperator
-com.weceng.cece.operator.bd.BigDecimalAvgOperator
-com.weceng.cece.operator.bd.BigDecimalDivOperator
-com.weceng.cece.operator.bd.BigDecimalMultiOperator
-com.weceng.cece.operator.bd.BigDecimalSubOperator
