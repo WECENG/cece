@@ -1,4 +1,4 @@
-# pps-cece
+# cece
 
 基于字符串表达式的轻量级计算引擎 CharSequence Expression Calculate Engine(简称cece)
 
