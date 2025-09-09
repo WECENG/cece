@@ -1,0 +1,5 @@
+com.github.cece.operator.bd.BigDecimalAddOperator
+com.github.cece.operator.bd.BigDecimalAvgOperator
+com.github.cece.operator.bd.BigDecimalDivOperator
+com.github.cece.operator.bd.BigDecimalMultiOperator
+com.github.cece.operator.bd.BigDecimalSubOperator
